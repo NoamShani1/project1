@@ -3,13 +3,13 @@ class Game {
 	
 	constructor() {
         this.background = new Background();
-//         this.timer = new Timer();
+         this.timer = new Timer();
            this.player = new Player();
 //         this.villian = new Villian();
            this.interactable = new Interactable();
 //         this.notifs = new Notifs();
-//         this.isSwordGrabbable = false;
-//         this.hasSword = false;
+            this.isSwordGrabbable = false;
+            this.hasSword = false;
 //         this.hasStarted = false;
 
 	}
@@ -17,10 +17,11 @@ class Game {
 
 
     setup() {
-//         this.isSwordGrabbable = false;
+           this.isSwordGrabbable = false;
 //         this.hasStarted = false;
 //         this.background.draw();
 //         this.notifs.startScreen();
+
       
 	}
 
@@ -38,7 +39,7 @@ class Game {
 
 // //interactable
 
-   this.sword = loadImage('/assets/interactable/sword.jpg');
+   this.sword = loadImage('/assets/interactable/sword.png');
 
  	}
 
@@ -47,6 +48,12 @@ draw() {
 		clear()
 		this.background.draw()
         this.player.draw()
+       // this.interactable.draw()
+        this.timer.swordAppear()
+        
+
+        // interactable loop for sword
+
 
         }
 }

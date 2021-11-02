@@ -7,6 +7,7 @@ class Player {
       this.speed = 4;
     }
 
+   
     draw() {
         image(game.playerImage, this.x, this.y, this.width, this.height);
         // player hits boundary at walls of the room

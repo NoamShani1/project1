@@ -7,10 +7,13 @@ function preload() {
 function setup() {
   createCanvas(1200, 700);
   game.setup();
+
+  
 }
 
 function draw() {
      
+  
   game.draw()
 
 
@@ -41,6 +44,11 @@ function keyPressed() {
   }
   if (keyCode === 38 || keyCode == 87) {
     game.player.moveUp();
+  }
+
+  if (keyCode === 32){
+
+    game.hasSword = true
   }
 }
 
