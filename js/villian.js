@@ -27,7 +27,7 @@ class Villian {
         }
     }
 
-     enemyCollision(playerInfo) {
+     villianCollision(playerInfo) {
        let villianX = this.x + this.width / 1.1;
        let villianY = this.y + this.height / 1.1;
     
@@ -38,11 +38,11 @@ class Villian {
       if (dist(villianX, villianY, playerX, playerY) < 25) {
         } else {
           if (!game.hasSword) {
-            game.gameOver();
-            console.log("lose");
+            game.gameOver = true
+            console.log(game.gameOver)
           } else {
-            game.winState();
-             console.log("win");
+            game.winState = true
+             
           }
          } 
        }

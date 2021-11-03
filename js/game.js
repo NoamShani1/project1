@@ -7,9 +7,12 @@ class Game {
            this.player = new Player();
            this.villian = new Villian();
            this.interactable = new Interactable();
-//         this.notifs = new Notifs();
-            this.isSwordGrabbable = false;
-            this.hasSword = false;
+           this.notifs = new Notifs();
+           this.isSwordGrabbable = false;
+           this.hasSword = false;
+           this.gameOver = false
+           this.win = false 
+          
 //         this.hasStarted = false;
 
 	}
@@ -53,6 +56,8 @@ draw() {
        // this.interactable.draw()
         this.timer.swordAppear()
         this.timer.villianAppear()
+       
+        
 
     
        
@@ -64,12 +69,16 @@ draw() {
 
  
 gameOver(){
-                 
-  noLoop();
+  if(this.gameOver){
+    Image(this.gameOverImage)
+  }          
+  
 }
 
 winState() {
-
-  noLoop();
+ if ( this.win){
+  Image(this.winImage)
+ }
+  
 }
 }
