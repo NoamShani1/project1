@@ -56,10 +56,8 @@ draw() {
        // this.interactable.draw()
         this.timer.swordAppear()
         this.timer.villianAppear()
-       
-        
-
-    
+        this.villian.villianCollision(this.player)
+      
        
         
 
@@ -68,16 +66,16 @@ draw() {
         }
 
  
-gameOver(){
-  if(this.gameOver){
-    Image(this.gameOverImage)
-  }          
+// gameOver(){
+//   // if(this.gameOver()){
+//   //   image(this.gameOverImage)
+//   // }          
   
-}
+// }
 
 winState() {
  if ( this.win){
-  Image(this.winImage)
+  image(this.winImage)
  }
   
 }

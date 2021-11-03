@@ -22,7 +22,7 @@ class Notifs{
     
     win(){
     
-    Image(game.winImage,this.x, this.y, this.width, this.height)
+    image(game.winImage,this.x, this.y, this.width, this.height)
 
     }
 

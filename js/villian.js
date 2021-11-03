@@ -36,14 +36,16 @@ class Villian {
         let playerY = playerInfo.y + playerInfo.height / 2;
     
       if (dist(villianX, villianY, playerX, playerY) < 25) {
-        } else {
-          if (!game.hasSword) {
-            game.gameOver = true
-            console.log(game.gameOver)
-          } else {
-            game.winState = true
+        
+        //   if (!game.hasSword) {
+              console.log('gzuz')
+            // game.gameOver = true
+        // console.log(game.gameOver)
+          
+        //   } else {
+        //     game.winState = true
              
-          }
+        //   }
          } 
        }
     }
