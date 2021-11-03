@@ -1,0 +1,55 @@
+class Villian {
+    constructor() {
+        this.x = 100;
+        this.y = 350;
+        this.width = 60;
+        this.height = 70;
+        this.speed = 2;
+    }
+    draw() {
+        image(game.villianImage, this.x, this.y, this.width, this.height);
+
+        // follow player
+        let rotation = atan2(game.player.y - this.y, game.player.x - this.x);
+        this.x += cos(rotation) * this.speed;
+        this.y += sin(rotation) * this.speed;
+
+        // boundary 
+        if (this.x >= 200 || this.x <= 1000) { 
+            this.speed *= -1;
+            this.x += cos(rotation) * this.speed;
+            this.y += sin(rotation) * this.speed;
+        }
+        if (this.y >= 275 || this.y <= 600) {
+            this.speed *= -1;
+            this.x += cos(rotation) * this.speed;
+            this.y += sin(rotation) * this.speed; 
+        }
+    }
+
+     enemyCollision(playerInfo) {
+       let villianX = this.x + this.width / 1.1;
+       let villianY = this.y + this.height / 1.1;
+    
+        // center point the player
+      let playerX = playerInfo.x + playerInfo.width / 2;
+        let playerY = playerInfo.y + playerInfo.height / 2;
+    
+      if (dist(villianX, villianY, playerX, playerY) < 25) {
+        } else {
+          if (!game.hasSword) {
+            game.gameOver();
+            console.log("lose");
+          } else {
+            game.winState();
+             console.log("win");
+          }
+         } 
+       }
+    }
+    
+
+
+
+
+

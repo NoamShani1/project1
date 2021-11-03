@@ -9,7 +9,7 @@ class Timer {
         
         if (frameCount % 60 == 0 && this.timer > 0) {
             this.timer--;
-console.log(this.timer)
+          (this.timer)
         }
       
         if (this.timer <= 58){
@@ -18,6 +18,15 @@ console.log(this.timer)
     }
 
 }     
+
+
+villianAppear(){
+
+    if (this.timer <= 58) {
+        game.villian.draw();
     
+}
+  
+}
 }
 

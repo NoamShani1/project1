@@ -5,7 +5,7 @@ class Game {
         this.background = new Background();
          this.timer = new Timer();
            this.player = new Player();
-//         this.villian = new Villian();
+           this.villian = new Villian();
            this.interactable = new Interactable();
 //         this.notifs = new Notifs();
             this.isSwordGrabbable = false;
@@ -19,7 +19,7 @@ class Game {
     setup() {
            this.isSwordGrabbable = false;
 //         this.hasStarted = false;
-//         this.background.draw();
+   //        this.background.draw();
 //         this.notifs.startScreen();
 
       
@@ -29,19 +29,21 @@ class Game {
 	preload() {
 	this.backgroundImage = loadImage('/assets/background/forrest.jpg')
 	this.playerImage = loadImage('/assets/player/link.png')
-// 		this.villianImage = loadImage('/assets/villian/villian.jpg')
+	this.villianImage = loadImage('/assets/villian/villian.png')
 
-// // notif
+// // notifs
+
  
 // this.startScreenImage = loadImage('/assets/notifs/start.png');
-// this.gameOverImage = loadImage('/assets/notifs/gameover.jpg');
-// this.winImage = loadImage('/assets/notifs/win.jpg');
+  this.gameOverImage = loadImage('/assets/notifs/gameover.png');
+  this.winImage = loadImage('/assets/notifs/win.png');
 
 // //interactable
 
    this.sword = loadImage('/assets/interactable/sword.png');
 
  	}
+
 
 draw() {
 // 		// console.log('game drawing')
@@ -50,11 +52,24 @@ draw() {
         this.player.draw()
        // this.interactable.draw()
         this.timer.swordAppear()
+        this.timer.villianAppear()
+
+    
+       
         
 
-        // interactable loop for sword
-
+        // interactable loop for swor
 
         }
-}
+
  
+gameOver(){
+                 
+  noLoop();
+}
+
+winState() {
+
+  noLoop();
+}
+}
