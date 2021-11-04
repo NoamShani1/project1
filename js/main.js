@@ -1,6 +1,7 @@
 const game = new Game();
 
 function preload() {
+  
   game.preload();
 }
 

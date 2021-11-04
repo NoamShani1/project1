@@ -24,6 +24,7 @@ class Notifs {
 
         image(game.winImage, this.x, this.y, this.width, this.height)
 
+
     }
 
 

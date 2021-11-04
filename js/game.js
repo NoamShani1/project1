@@ -26,6 +26,12 @@ class Game {
 
   setup() {
     this.isSwordGrabbable = false;
+    this.introSound = new Audio('assets/sound/firstTrack.mp3')
+    this.alertSound = new Audio('/assets/sound/alertSound.mp3')
+    this.collisionSound = new Audio('/assets/sound/collisionSound.mp3')
+    this.fightSound = new Audio('/assets/sound/fight.mp3')
+    this.winSound = new Audio('/assets/sound/winSound.mp3')
+    this.looseSound = new Audio('/assets/sound/gameOverSound.mp3')
     //        this.background.draw();
     //         this.notifs.startScreen();
 
@@ -51,6 +57,11 @@ class Game {
     this.speech2 = loadImage('assets/notifs/i-should-try-and-get-some-rest-.gif')
     this.speech3 = loadImage('assets/notifs/oh-no-an-enemy-where-is-my-.gif')
 
+    
+    
+    
+
+
 
   }
 
@@ -69,26 +80,38 @@ class Game {
     // //   setInterval(function () {
     // //     index++
     // //   }, 2000);
-
-
-
-
-      
+   
 
     // }
     if (game.hasStarted && game.text) {
+
       this.timer.showDialog()
       this.timer.swordAppear()
-      this.timer.villianAppear()
+      this.introSound.play()
+
+     console.log(this.timer.villianAppear())
+      if( this.timer.villianAppear()){
+        this.introSound.pause()
+        this.alertSound.play()
+        this.fightSound.play()
+      }
+
+
       this.villian.villianCollision(this.player)
+      
 
     }
 
     if (this.gameOver) {
       image(this.gameOverImage, 350, 100, 500, 500)
+      this.fightSound.pause()
+      this.looseSound.play()
     }
     if (this.winState) {
       image(this.winImage, 350, 100, 500, 500)
+      this.fightSound.pause()
+      this.winSound.play()
+      
     }
 
 
@@ -100,7 +123,7 @@ class Game {
 
   winState() {
     if (this.win) {
-      image(this.winImage)
+      image(this.winImage) 
     }
 
   }
