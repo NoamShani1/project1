@@ -12,7 +12,7 @@ class Timer {
           (this.timer)
         }
       
-        if (this.timer <= 58){
+        if (this.timer <= 53){
 
         game.interactable.draw();
     }
@@ -22,11 +22,13 @@ class Timer {
 
 villianAppear(){
 
-    if (this.timer <= 58) {
+    if (this.timer <= 55) {
         game.villian.draw();
     
 }
   
 }
+
+
 }
 

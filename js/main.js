@@ -13,8 +13,7 @@ function setup() {
 
 function draw() {
 
-
-  game.draw()
+   game.draw()
   
 
   if (keyIsDown(40)) {
@@ -56,6 +55,9 @@ function keyPressed() {
       }
     }
   }
+
+  if (keyCode === 13) {
+    game.hasStarted = true;
+    game.text = false
 }
-
-
+}
