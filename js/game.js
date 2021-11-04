@@ -96,10 +96,10 @@ class Game {
         this.fightSound.play()
       }
 
+      this.villian.villianCollision(this.player) 
 
-      this.villian.villianCollision(this.player)
+       
       
-
     }
 
     if (this.gameOver) {
@@ -110,6 +110,7 @@ class Game {
     if (this.winState) {
       image(this.winImage, 350, 100, 500, 500)
       this.fightSound.pause()
+      this.collisionSound.play()
       this.winSound.play()
       
     }
