@@ -58,6 +58,6 @@ function keyPressed() {
 
   if (keyCode === 13) {
     game.hasStarted = true;
-    game.text = false
+    game.text = true
 }
 }

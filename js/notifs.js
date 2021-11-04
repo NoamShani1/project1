@@ -39,17 +39,17 @@ class Notifs {
     }
 
 
-    startSpeech(index) {
-        console.log('call')
-        if(index > 2) return
-        console.log(index)
-        let imgArray = [game.speech1,
-        game.speech2,
-        game.speech3]
+    // startSpeech(index) {
+    //     console.log('call')
+    //     if(index > 2) return
+    //     console.log(index)
+    //     let imgArray = [game.speech1,
+    //     game.speech2,
+    //     game.speech3]
 
-        image(imgArray[index], game.player.x, game.player.y, 200, 200)
+    //     image(imgArray[index], game.player.x, game.player.y, 200, 200)
 
-    }
+    // }
 
 
     // before next iteratipon pause xx seconds 

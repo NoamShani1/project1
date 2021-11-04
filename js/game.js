@@ -8,12 +8,14 @@ class Game {
     this.villian = new Villian();
     this.interactable = new Interactable();
     this.notifs = new Notifs();
+    this.dialog = new Dialog();
     this.isSwordGrabbable = false;
     this.hasSword = false;
     this.gameOver = false
     this.winState = false
     this.hasStarted = false;
     this.text = false
+    
 
 
     //         this.hasStarted = false;
@@ -61,20 +63,21 @@ class Game {
     this.notifs.startScreen()
 
 
-    if (!game.hasStarted === game.text) {
+    // // if (!game.hasStarted === game.text) {
 
-      let index = -1
-      setInterval(function () {
-        index++
-      }, 2000);
+    // //   let index = -1
+    // //   setInterval(function () {
+    // //     index++
+    // //   }, 2000);
 
 
 
 
       
 
-    }
+    // }
     if (game.hasStarted && game.text) {
+      this.timer.showDialog()
       this.timer.swordAppear()
       this.timer.villianAppear()
       this.villian.villianCollision(this.player)
@@ -101,4 +104,7 @@ class Game {
     }
 
   }
+
+
+
 }
