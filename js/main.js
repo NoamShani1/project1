@@ -61,4 +61,9 @@ function keyPressed() {
     game.hasStarted = true;
     game.text = true
 }
+
+
+if (keyCode === 82) {
+ game.gameReset = true
+}
 }

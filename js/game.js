@@ -16,6 +16,7 @@ class Game {
     this.hasStarted = false;
     this.text = false
     
+    
 
 
     //         this.hasStarted = false;
@@ -126,6 +127,11 @@ class Game {
     if (this.win) {
       image(this.winImage) 
     }
+
+  }
+
+  gameReset(){
+   location.reload()
 
   }
 
