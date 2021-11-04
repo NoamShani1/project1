@@ -33,23 +33,23 @@ class Game {
 
 
   preload() {
-    this.backgroundImage = loadImage('/assets/background/forrest.jpg')
-    this.playerImage = loadImage('/assets/player/link.png')
-    this.villianImage = loadImage('/assets/villian/villian.png')
+    this.backgroundImage = loadImage('assets/background/forrest.jpg')
+    this.playerImage = loadImage('assets/player/link.png')
+    this.villianImage = loadImage('assets/villian/villian.png')
 
     // // notifs
 
 
-    this.startScreenImage = loadImage('/assets/notifs/ZeldaStart.png');
-    this.gameOverImage = loadImage('/assets/notifs/gameover.png');
-    this.winImage = loadImage('/assets/notifs/win.png');
+    this.startScreenImage = loadImage('assets/notifs/ZeldaStart.png');
+    this.gameOverImage = loadImage('assets/notifs/gameover.png');
+    this.winImage = loadImage('assets/notifs/win.png');
 
     // //interactable
 
-    this.sword = loadImage('/assets/interactable/sword.png');
-    this.speech1 = loadImage('/assets/notifs/hmm-it-seems-quiet-here-.gif')
-    this.speech2 = loadImage('/assets/notifs/i-should-try-and-get-some-rest-.gif')
-    this.speech3 = loadImage('/assets/notifs/oh-no-an-enemy-where-is-my-.gif')
+    this.sword = loadImage('assets/interactable/sword.png');
+    this.speech1 = loadImage('assets/notifs/hmm-it-seems-quiet-here-.gif')
+    this.speech2 = loadImage('assets/notifs/i-should-try-and-get-some-rest-.gif')
+    this.speech3 = loadImage('assets/notifs/oh-no-an-enemy-where-is-my-.gif')
 
 
   }
