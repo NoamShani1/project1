@@ -27,11 +27,11 @@ class Game {
   setup() {
     this.isSwordGrabbable = false;
     this.introSound = new Audio('assets/sound/firstTrack.mp3')
-    this.alertSound = new Audio('/assets/sound/alertSound.mp3')
-    this.collisionSound = new Audio('/assets/sound/collisionSound.mp3')
-    this.fightSound = new Audio('/assets/sound/fight.mp3')
-    this.winSound = new Audio('/assets/sound/winSound.mp3')
-    this.looseSound = new Audio('/assets/sound/gameOverSound.mp3')
+    this.alertSound = new Audio('assets/sound/alertSound.mp3')
+    this.collisionSound = new Audio('assets/sound/collisionSound.mp3')
+    this.fightSound = new Audio('assets/sound/fight.mp3')
+    this.winSound = new Audio('assets/sound/winSound.mp3')
+    this.looseSound = new Audio('assets/sound/gameOverSound.mp3')
     //        this.background.draw();
     //         this.notifs.startScreen();
 
