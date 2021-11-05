@@ -4,7 +4,7 @@ class Villian {
       this.y = 350;
       this.width = 60;
       this.height = 70;
-      this.speed = 2;
+      this.speed = 1;
     }
     draw() {
       image(game.villianImage, this.x, this.y, this.width, this.height);
